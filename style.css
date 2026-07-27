@@ -136,3 +136,45 @@ z-index:999;
         transform:scale(1.06);
     }
 }
+.tap-hint{
+    position:absolute;
+    top:25px;
+    left:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#fff;
+    background:rgba(0,0,0,.35);
+    padding:10px 16px;
+    border-radius:30px;
+    backdrop-filter:blur(8px);
+    z-index:9999;
+    animation:fadeIn 1s ease;
+}
+
+.tap-hint span:last-child{
+    font-size:17px;
+    font-weight:bold;
+}
+
+.hand{
+    font-size:28px;
+    animation:tap 1.2s infinite;
+}
+
+@keyframes tap{
+    0%{transform:translateY(0) scale(1);}
+    50%{transform:translateY(-8px) scale(1.15);}
+    100%{transform:translateY(0) scale(1);}
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
