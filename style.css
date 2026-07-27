@@ -112,3 +112,27 @@ backdrop-filter:blur(8px);
 z-index:999;
 
 }
+.tap-hint{
+    position:absolute;
+    top:25px;
+    left:20px;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:bold;
+    background:rgba(0,0,0,.35);
+    padding:8px 14px;
+    border-radius:20px;
+    animation:blink 1.4s infinite;
+    z-index:999;
+}
+
+@keyframes blink{
+    0%,100%{
+        opacity:1;
+        transform:scale(1);
+    }
+    50%{
+        opacity:.4;
+        transform:scale(1.06);
+    }
+}
